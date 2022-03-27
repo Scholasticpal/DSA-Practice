@@ -1,4 +1,5 @@
 
+
 #include <iostream>
 
 using namespace std;
@@ -6,19 +7,21 @@ using namespace std;
 int main()
 {   
     int m = 0;
-    int n = 798897;
-    int b = n;
+    int n = 0;
+    cout<<"Enter value";
+    cin>>n;
+    int temp = n;
     bool result = true;
         
-        while(n>0){
+        while(temp>0){
             
-            m = m*10 + n%10;
-            n = n/10;
+            m = m*10 + temp%10;
+            temp = temp/10;
             
         }
         cout << m<<endl;
         cout<< n<<endl;
-        if(b == m){
+        if(n == m){
             result = true;
             cout<< "true";
         }
