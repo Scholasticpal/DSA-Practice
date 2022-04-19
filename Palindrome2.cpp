@@ -1,30 +1,27 @@
-#include <stdio.h>
-#include <string.h>
+#include <iostream>
+using namespace std;
 
-// A function to check if a string str is palindrome
-void isPalindrome(char str[])
-{
-	// Start from leftmost and rightmost corners of str
-	int l = 0;
-	int h = strlen(str) - 1;
-
-	// Keep comparing characters while they are same
-	while (h > l)
-	{
-		if (str[l++] != str[h--])
-		{
-			printf("%s is not a palindrome\n", str);
-			return;
-		}
-	}
-	printf("%s is a palindrome\n", str);
+bool isPal(int n){
+    int rev = 0;
+    int temp = n;
+    while(temp!= 0){
+        int ld = temp % 10;
+        rev = rev*10 + ld;
+        temp = temp/10;
+    }
+    if(rev == n){
+        cout<<n<< " is a palindrome ";
+    }
+    else{
+        cout<<n<< " is not a palindrome";
+    }
+    return(rev == n);
+    
 }
 
-// Driver program to test above function
-int main()
-{
-	isPalindrome("abba");
-	isPalindrome("abbccbba");
-	isPalindrome("geeks");
-	return 0;
+int main(){
+    int a = 0;
+    cout<< " enter number: ";
+    cin>> a;
+    isPal(a);
 }
