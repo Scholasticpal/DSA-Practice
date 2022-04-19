@@ -2,6 +2,8 @@
 using namespace std;
 
 // Trailing Zeros in Factorial Naive Method
+/* Note: This is a very bad approach  and causes overflow for even slightly
+higher values of n */
 
 int countZeros(int n){
     
