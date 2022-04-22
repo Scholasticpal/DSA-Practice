@@ -1,4 +1,5 @@
 //Function for BFS in a graph
+// Q.  Given an undirected graph and a source vertex 's' ,print B.F.S. from given source.
 
 void BFS(vector<int> adj[], int v, int s)
 {
